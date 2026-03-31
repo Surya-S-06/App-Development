@@ -38,11 +38,28 @@ A curated monorepo of application development projects built during my learning 
 
 ---
 
-### 5. 🪑 SeatBookingSystem
-**Description:** A web-based Seat Booking System developed using HTML, CSS, JavaScript, Java Servlets, and MySQL. Users can select and book seats, with booking data stored and retrieved from the database using JDBC. The system also provides a view of all bookings and prevents duplicate seat reservations.
 
-- **Tech Stack:** HTML, CSS, JavaScript, Java Servlets, MySQL, JDBC, Apache Tomcat
-- **Repository:** [SeatBookingSystem](https://github.com/Surya-S-06/SeatBookingSystem)
+### 6. 📍 Location-App
+**Description:** A GPS location tracking app that fetches live coordinates using the FusedLocationProvider API, and allows users to copy, share, and view their location on Google Maps.  
+*Note: This project is an enhanced version inspired by [chitherpandik/LOCATION](https://github.com/chitherpandik/LOCATION).*
+- **My Improvements:** Added accuracy display, copy-to-clipboard functionality, modernized UI with card layouts, added loading states, and live permission/status feedback.
+- **Tech Stack:** Java, Android SDK, Fused Location Provider
+
+---
+
+### 7. ✉️ Email-App
+**Description:** An Android application that composes emails by validating inputs and triggering the system's email client via Intents.  
+*Note: This project is an enhanced version inspired by [chitherpandik/Email](https://github.com/chitherpandik/Email).*
+- **My Improvements:** Added CC field support, email pattern validation, "Clear Form" functionality, scrollable layout, and inline error validation messages.
+- **Tech Stack:** Java, Android SDK, Android Intents
+
+---
+
+### 8. 🔐 Notification-App
+**Description:** A user registration system that saves credentials to a local SQLite database, featuring navigating and viewing saved records.  
+*Note: This project is an enhanced version inspired by [chitherpandik/Notification_exercise](https://github.com/chitherpandik/Notification_exercise).*
+- **My Improvements:** Implemented password text masking, added a live database record counter, fixed array bound edge-cases in cursor navigation, and designed a cleaner card-based UI.
+- **Tech Stack:** Java, Android SDK, SQLite
 
 ---
 
@@ -50,9 +67,9 @@ A curated monorepo of application development projects built during my learning 
 
 | Technology | Projects |
 |---|---|
-| Java (Android) | Shape-App, Restaurant-Feedback-App, Animation-in-App, DataBase-App |
-| SQLite | DataBase-App |
-| Material Design | Shape-App, Animation-in-App |
+| Java (Android) | Shape-App, Restaurant-Feedback-App, Animation-in-App, DataBase-App, Location-App, Email-App, Notification-App |
+| SQLite | DataBase-App, Notification-App |
+| Material Design / UI Cards | Shape-App, Animation-in-App, Location-App, Notification-App |
 | HTML/CSS/JavaScript | SeatBookingSystem |
 | Java Servlets & MySQL | SeatBookingSystem |
 

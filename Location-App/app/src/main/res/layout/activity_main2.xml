@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F0F4F8">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📍 Your Location"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Coordinates Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Latitude: --"
+                android:textSize="18sp"
+                android:textColor="#1565C0"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Longitude: --"
+                android:textSize="18sp"
+                android:textColor="#1565C0"
+                android:layout_marginBottom="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvAccuracy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accuracy: --"
+                android:textSize="13sp"
+                android:textColor="#78909C"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="#1565C0"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/btnCopyCoords"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="📋  Copy Coordinates"
+        android:textSize="14sp"
+        android:backgroundTint="#37474F"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="🔗  Share Location"
+        android:textSize="14sp"
+        android:backgroundTint="#1565C0"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnOpenMap"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="🗺  Open in Google Maps"
+        android:textSize="14sp"
+        android:backgroundTint="#2E7D32"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
