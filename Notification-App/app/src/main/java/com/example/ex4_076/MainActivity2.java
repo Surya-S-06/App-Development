@@ -116,7 +116,13 @@ public class MainActivity2 extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        finish(); // Improved navigation without annoying alert dialog, just standard back press behaviour
+        // Re-added Alert Dialog as requested instead of standard finish()
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity2.this);
+        builder.setMessage("Close the records view and go back?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", (dialog, which) -> finish())
+                .setNegativeButton("No", (dialog, which) -> dialog.dismiss());
+        builder.create().show();
     }
 
     @Override

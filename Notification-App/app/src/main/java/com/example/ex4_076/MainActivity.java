@@ -56,13 +56,22 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
-            db.execSQL("INSERT INTO Student VALUES('" + user + "','" + pass + "')");
-            Toast.makeText(MainActivity.this, "✅ Record Inserted Successfully", Toast.LENGTH_SHORT).show();
+            // Added Alert Dialog as requested
+            new android.app.AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Confirm Registration")
+                    .setMessage("Are you sure you want to save this record into the database?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes, Save", (dialog, which) -> {
+                        db.execSQL("INSERT INTO Student VALUES('" + user + "','" + pass + "')");
+                        Toast.makeText(MainActivity.this, "✅ Record Inserted Successfully", Toast.LENGTH_SHORT).show();
 
-            e1.setText("");
-            e2.setText("");
-            
-            updateRecordCount();
+                        e1.setText("");
+                        e2.setText("");
+                        
+                        updateRecordCount();
+                    })
+                    .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
+                    .show();
         });
 
         b2.setOnClickListener(view -> {
