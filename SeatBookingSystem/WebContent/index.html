@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your seat instantly. Choose from available seats and confirm your reservation.">
+    <title>Seat Booking | SeatBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── Navigation Bar ─────────────────────────────── -->
+<nav class="navbar">
+    <a href="index.html" class="nav-brand">
+        <div class="brand-icon">🎫</div>
+        <span class="brand-name">SeatBook</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">🏠 Home</a></li>
+        <li><a href="view.html">📋 View Bookings</a></li>
+        <li><a href="admin.html">⚙️ Admin</a></li>
+    </ul>
+</nav>
+
+<!-- ── Page Content ───────────────────────────────── -->
+<div class="page-wrap">
+
+    <!-- Header -->
+    <div class="page-header">
+        <h1 class="page-title">Seat Availability &amp; Booking</h1>
+        <p class="page-subtitle">Click a green seat, enter your name, and confirm booking</p>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-row">
+        <div class="stat-card total">
+            <div class="stat-number">10</div>
+            <div class="stat-label">Total Seats</div>
+        </div>
+        <div class="stat-card booked">
+            <div class="stat-number" id="stat-booked">0</div>
+            <div class="stat-label">Booked</div>
+        </div>
+        <div class="stat-card available">
+            <div class="stat-number" id="stat-avail">10</div>
+            <div class="stat-label">Available</div>
+        </div>
+    </div>
+
+    <!-- Two-Column Layout -->
+    <div class="two-col">
+
+        <!-- LEFT: Seat Grid -->
+        <div class="card">
+            <div class="card-title">🪑 Select Your Seat</div>
+
+            <div class="row-label">Row A</div>
+            <div class="seat-row">
+                <button class="seat available" id="seat-A1" onclick="selectSeat('A1')"><span class="seat-icon">🪑</span>A1</button>
+                <button class="seat available" id="seat-A2" onclick="selectSeat('A2')"><span class="seat-icon">🪑</span>A2</button>
+                <button class="seat available" id="seat-A3" onclick="selectSeat('A3')"><span class="seat-icon">🪑</span>A3</button>
+                <button class="seat available" id="seat-A4" onclick="selectSeat('A4')"><span class="seat-icon">🪑</span>A4</button>
+                <button class="seat available" id="seat-A5" onclick="selectSeat('A5')"><span class="seat-icon">🪑</span>A5</button>
+            </div>
+
+            <div class="row-label">Row B</div>
+            <div class="seat-row">
+                <button class="seat available" id="seat-B1" onclick="selectSeat('B1')"><span class="seat-icon">🪑</span>B1</button>
+                <button class="seat available" id="seat-B2" onclick="selectSeat('B2')"><span class="seat-icon">🪑</span>B2</button>
+                <button class="seat available" id="seat-B3" onclick="selectSeat('B3')"><span class="seat-icon">🪑</span>B3</button>
+                <button class="seat available" id="seat-B4" onclick="selectSeat('B4')"><span class="seat-icon">🪑</span>B4</button>
+                <button class="seat available" id="seat-B5" onclick="selectSeat('B5')"><span class="seat-icon">🪑</span>B5</button>
+            </div>
+
+            <!-- Legend -->
+            <div class="legend">
+                <div class="legend-item"><div class="legend-dot available"></div> Available</div>
+                <div class="legend-item"><div class="legend-dot selected"></div> Selected</div>
+                <div class="legend-item"><div class="legend-dot booked"></div> Booked</div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Booking Form -->
+        <div class="card">
+            <div class="card-title">✏️ Book Your Seat</div>
+
+            <!-- Shows which seat is selected -->
+            <div class="sel-display" id="sel-display">
+                ✅ Selected: <span id="sel-seat-txt">—</span>
+            </div>
+
+            <!-- Name Input -->
+            <div class="form-group">
+                <label class="form-label" for="user-name">Your Name</label>
+                <input type="text" id="user-name" class="form-input"
+                       placeholder="Enter your full name"
+                       maxlength="100" autocomplete="off">
+            </div>
+
+            <!-- Book Button -->
+            <button class="btn btn-primary" id="book-btn"
+                    onclick="bookSeat()" style="width:100%;" disabled>
+                🎫 Book Seat
+            </button>
+
+            <!-- Success / Error message -->
+            <div class="msg" id="msg-box">
+                <span id="msg-text"></span>
+            </div>
+
+            <!-- How-to hint -->
+            <div class="hint-box">
+                <p><strong>How to book:</strong><br>
+                   1. Click a green seat in the grid<br>
+                   2. Enter your full name<br>
+                   3. Click "Book Seat" to confirm</p>
+            </div>
+        </div>
+
+    </div><!-- end two-col -->
+</div><!-- end page-wrap -->
+
+<script src="js/booking.js"></script>
+</body>
+</html>

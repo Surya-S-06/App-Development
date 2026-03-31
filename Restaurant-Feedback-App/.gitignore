@@ -1,0 +1,34 @@
+# Built APK / AAB files
+*.apk
+*.aab
+*.ap_
+
+# Gradle build files
+.gradle/
+build/
+app/build/
+
+# Local configuration (contains SDK path)
+local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+captures/
+
+# VS Code (not needed for Android Studio)
+.vscode/
+
+# Keystore files
+*.jks
+*.keystore
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Log files
+*.log

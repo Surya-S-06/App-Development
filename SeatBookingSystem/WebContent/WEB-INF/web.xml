@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Seat Booking System</display-name>
+
+    <!-- ── Servlet 1: Book a Seat (POST) ─────────────────────────────── -->
+    <servlet>
+        <servlet-name>BookSeatServlet</servlet-name>
+        <servlet-class>com.seatbooking.BookSeatServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookSeatServlet</servlet-name>
+        <url-pattern>/BookSeat</url-pattern>
+    </servlet-mapping>
+
+    <!-- ── Servlet 2: Get Booked Seats (GET) ─────────────────────────── -->
+    <servlet>
+        <servlet-name>GetBookedSeatsServlet</servlet-name>
+        <servlet-class>com.seatbooking.GetBookedSeatsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetBookedSeatsServlet</servlet-name>
+        <url-pattern>/GetBookedSeats</url-pattern>
+    </servlet-mapping>
+
+    <!-- ── Servlet 3: Get All Bookings (GET) ─────────────────────────── -->
+    <servlet>
+        <servlet-name>GetAllBookingsServlet</servlet-name>
+        <servlet-class>com.seatbooking.GetAllBookingsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetAllBookingsServlet</servlet-name>
+        <url-pattern>/GetAllBookings</url-pattern>
+    </servlet-mapping>
+
+    <!-- ── Servlet 4: Delete Booking (DELETE) ────────────────────────── -->
+    <servlet>
+        <servlet-name>DeleteBookingServlet</servlet-name>
+        <servlet-class>com.seatbooking.DeleteBookingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBookingServlet</servlet-name>
+        <url-pattern>/DeleteBooking</url-pattern>
+    </servlet-mapping>
+
+    <!-- ── Default welcome file ──────────────────────────────────────── -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

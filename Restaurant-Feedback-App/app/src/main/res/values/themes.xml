@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.RestaurantFeedback" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">#E65100</item>
+        <item name="colorPrimaryDark">#BF360C</item>
+        <item name="colorAccent">#FF6D00</item>
+    </style>
+</resources>
